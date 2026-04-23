@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-content" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <div className="mb-2">
+        <div className="footer-content" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '40px' }}>
+          <div className="mb-2" style={{ width: '40%', minWidth: '200px' }}>
             <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.025em' }}>TIMES MEDIA</span>
           </div>
-          <ul className="contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.95rem' }}>
+          <ul className="contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.95rem', width: '50%', minWidth: '300px' }}>
             <li>상호명 : 주식회사 타임스미디어</li>
             <li>대표이사 : 김국진</li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
