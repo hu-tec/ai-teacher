@@ -3,6 +3,7 @@ import Layout from './layouts/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import CoursesPage from './pages/CoursesPage';
+import CourseEnrollmentPage from './pages/CourseEnrollmentPage';
 import RegistrationGuide from './pages/guide/RegistrationGuide';
 import AcademicCalendar from './pages/guide/AcademicCalendar';
 import CourseBenefits from './pages/guide/CourseBenefits';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/courses/enroll" element={<CourseEnrollmentPage />} />
         
         {/* Course Guide Sub-pages */}
         <Route path="/guide/registration" element={<RegistrationGuide />} />

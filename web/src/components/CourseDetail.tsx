@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import type { Course } from '../data/courses';
 
 interface CourseDetailProps {
@@ -5,6 +6,7 @@ interface CourseDetailProps {
 }
 
 export default function CourseDetail({ course }: CourseDetailProps) {
+  const navigate = useNavigate();
   if (!course) return null;
 
   return (
@@ -40,7 +42,12 @@ export default function CourseDetail({ course }: CourseDetailProps) {
             <span className="value">{course.tuition}</span>
           </li>
           <li className="mt-4">
-            <button className="btn-primary" style={{ width: '100%' }} onClick={() => alert('수강신청 페이지로 이동합니다.')}>
+            <button
+              type="button"
+              className="btn-primary"
+              style={{ width: '100%' }}
+              onClick={() => navigate(`/courses/enroll?courseId=${encodeURIComponent(course.id)}`)}
+            >
               수강신청 바로가기
             </button>
           </li>
